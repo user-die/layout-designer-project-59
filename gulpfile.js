@@ -8,14 +8,14 @@ const browserSyncJob = () => {
     server: "build/",
   });
 
-  watch(["src/sass/.scss"], buildSass);
-  watch(["src/pages/.pug"], buildPug);
+  watch(["src/sass/*.scss"], buildSass);
+  watch(["src/pages/*.pug"], buildPug);
 };
 
 const buildSass = () => {
   console.log("Компиляция SASS");
 
-  return src("src/sass/.scss")
+  return src("src/sass/*.scss")
     .pipe(sass())
     .pipe(dest("build/styles/"))
     .pipe(browserSync.stream());
@@ -24,7 +24,7 @@ const buildSass = () => {
 const buildPug = () => {
   console.log("Компиляция Pug");
 
-  return src("src/pages/.pug")
+  return src("src/pages/index.pug")
     .pipe(pug())
     .pipe(dest("build/"))
     .pipe(browserSync.stream());
@@ -32,4 +32,3 @@ const buildPug = () => {
 
 exports.server = browserSyncJob;
 exports.build = parallel(buildSass, buildPug);
-g;
