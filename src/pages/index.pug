@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -9,27 +9,16 @@ html(lang="en")
         link(rel="stylesheet", href="styles/style.css")
     body 
       section
-        .container-xxl.me-auto.ms-auto.mt-4.mb-4.ps-4.pe-4.pt-4.pb-4.height.vh-100.bg-light
-          div.border.rounded.bg-white
-            div.row.me-0.ms-0
-              nav.btn-group.col-4.pe-0.ps-0
-                a(href="").btn.bg-primary.rounded-0.rounded-start.text-light
-                  i.bi.bi-2-circle.fs-4
-                a(href="").btn.bg-primary.rounded-0.d-flex.text-light.align-items-center.pt-3.pb-3
-                  i.bi.bi-people.me-2.fs-4
-                  p.mb-0 Контакты
-                a(href="").btn.bg-primary.rounded-0.d-flex.text-light.align-items-center.pt-3.pb-3
-                  i.bi.bi-chat.me-2.fs-4
-                  p.mb-0 Сообщения
-                a(href="").btn.bg-primary.rounded-0.d-flex.text-light.align-items-center.pt-3.pb-3   
-                  i.bi.bi-person.me-2.fs-4
-                  p.mb-0 Профиль
-            .row.me-0.ms-0
-              div.col-4.pt-5.ps-4.pe-4.pb-5.border-end
-                include chat.pug
-              
+        .me-0.ms-0.mt-0.mb-0.ps-4.pe-4.pt-4.pb-4.vw-100.vh-100.bg-light
+          div.border.rounded.bg-white.container-xxl.pe-0.ps-0.mw
+            div.row.me-0.ms-0.roww
 
-              div.col-8.d-flex.align-items-center.flex-column.pe-0.ps-0
+              div.col-4.border-end.pe-0.ps-0
+                include header.pug
+                div.pe-3.ps-3.pt-5.pb-5
+                  include chat.pug
+              
+              div.col-8.d-flex.align-items-center.flex-column.justify-content-center.pe-0.ps-0
                 img(src="images/avatar_1.jpg", alt="")
                 p.fw-bold.mb-0.mt-3 Привет, Кодовёнок
                 P.text-secondary.mb-0 Выбери чат, чтобы начать общаться

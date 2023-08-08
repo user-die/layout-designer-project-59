@@ -1,18 +1,37 @@
 @import "../../../../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "components/contacts.scss";
 
-.is-50 {
-  height: 50px;
-  width: 50px;
+.mt-12 {
+  padding-top: 12px;
 }
 
-.pt-21 {
-  padding-top: 21px;
+.mt-34 {
+  margin-top: 34px;
 }
 
-.pb-22 {
-  padding-bottom: 22px;
+.pb-34 {
+  padding-bottom: 34px;
 }
 
-.mt-46 {
-  padding-top: 46px;
+.overflow {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.height {
+  min-height: 200px;
+  max-height: 700px;
+}
+
+.mw {
+  max-width: 1540px;
+  width: 100%;
+  max-height: 1032px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.roww {
+  height: 100%;
 }

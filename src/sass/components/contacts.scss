@@ -1,0 +1,43 @@
+$box-shadow-sm: 0 0.125rem 0.125rem rgba($black, 0.075);
+$white: #fff;
+$purple: #4545a5;
+$gray-600: #6c757d;
+
+.contact {
+  display: flex;
+  align-items: center;
+  box-shadow: #{$box-shadow-sm};
+  background-color: #{$white};
+  margin-bottom: 14px;
+  padding-bottom: 22px;
+  padding-top: 21px;
+  padding-left: 16px;
+
+  &-image {
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+  }
+
+  &-name {
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+
+  &-status {
+    margin-bottom: 0;
+    color: #{$gray-600};
+  }
+
+  &:hover {
+    background-color: #{$purple};
+
+    .contact-name {
+      color: #fbfbfb;
+    }
+
+    .contact-status {
+      color: #efefef;
+    }
+  }
+}
