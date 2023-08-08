@@ -9,8 +9,10 @@ html(lang="en")
         link(rel="stylesheet", href="styles/style.css")
     body 
       section
-        .container-xxl.me-auto.ms-auto.mt-4.mb-4.border.rounded.ps-0.pe-0.height.vh-100
-          nav.btn-group.col-4
+        .container-xxl.me-auto.ms-auto.mt-4.mb-4.ps-4.pe-4.pt-4.pb-4.height.vh-100.bg-light
+          div.border.rounded.bg-white
+            div.row.me-0.ms-0
+              nav.btn-group.col-4.pe-0.ps-0
                 a(href="").btn.bg-primary.rounded-0.rounded-start.text-light
                   i.bi.bi-2-circle.fs-4
                 a(href="").btn.bg-primary.rounded-0.d-flex.text-light.align-items-center.pt-3.pb-3
@@ -22,14 +24,14 @@ html(lang="en")
                 a(href="").btn.bg-primary.rounded-0.d-flex.text-light.align-items-center.pt-3.pb-3   
                   i.bi.bi-person.me-2.fs-4
                   p.mb-0 Профиль
-          .row.me-0.ms-0
-            div.col-4.pt-5.ps-4.pe-4.pb-5.border-end
-              include chat.pug
+            .row.me-0.ms-0
+              div.col-4.pt-5.ps-4.pe-4.pb-5.border-end
+                include chat.pug
               
 
-            div.col-8.d-flex.align-items-center.flex-column.pe-0.ps-0
-              img(src="images/avatar_1.jpg", alt="")
-              p.fw-bold.mb-0.mt-3 Привет, Кодовёнок
-              P.text-secondary.mb-0 Выбери чат, чтобы начать общаться
+              div.col-8.d-flex.align-items-center.flex-column.pe-0.ps-0
+                img(src="images/avatar_1.jpg", alt="")
+                p.fw-bold.mb-0.mt-3 Привет, Кодовёнок
+                P.text-secondary.mb-0 Выбери чат, чтобы начать общаться
 
         

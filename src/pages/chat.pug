@@ -1,13 +1,13 @@
 p.fs-2.fw-bold.mb-4 Контакты
 form(action="").pt-4.pb-4.ps-4.border-bottom.mb-1
   input(type="text" placeholder='Поиск по контактам' class='form-text').border-0.mt-0
-div 
+div.mt-46
   include contacts.pug
     each people, position in contacts
       p= position
-        div.border-bottom.d-flex.align-items-center
+        div.shadow-sm.bg-white.rounded.d-flex.align-items-center.ps-3.pt-21.pb-22
           each user in people  
-            img(src= user.avatar, alt="").w-25.h-25
+            img(src= user.avatar, alt="").is-50
             div.ms-4
               p.mb-0.fw-bold= user.name
               p.mb-0.text-secondary= user.status
