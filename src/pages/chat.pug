@@ -5,9 +5,9 @@ div
   include contacts.pug
     each people, position in contacts
       p= position
-        div.border-bottom.d-flex
+        div.border-bottom.d-flex.align-items-center
           each user in people  
             img(src= user.avatar, alt="").w-25.h-25
-            div
+            div.ms-4
               p.mb-0.fw-bold= user.name
-              p.mb-0= user.status
+              p.mb-0.text-secondary= user.status
