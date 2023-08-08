@@ -1,20 +1,13 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body 
-      p Контакты
-      label(for="")
-      form 
-      div 
-        include contacts.pug
-          each people, position in contacts
-            p= position
-            div
+p Контакты
+  label(for="23")
+  form(id="23" placeholder="Поиск по контактам")
+    div 
+      include contacts.pug
+        each people, position in contacts
+          p= position
+            div.border-bottom.d-flex
               each user in people  
-                img(src="", alt="")
-                p= user.name
-                p= user.status
-
+                img(src= user.avatar, alt="").w-25.h-25
+                div
+                  p.mb-0= user.name
+                  p.mb-0= user.status
