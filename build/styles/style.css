@@ -11990,13 +11990,16 @@ textarea.form-control-lg {
 }
 
 .overflow {
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.hidden {
+  overflow: hidden;
 }
 
 .height {
-  min-height: 200px;
-  max-height: 700px;
+  height: 600px;
 }
 
 .mw {
@@ -12010,4 +12013,19 @@ textarea.form-control-lg {
 
 .roww {
   height: 100%;
+}
+
+.br {
+  border-radius: 100px;
+}
+
+.wh90 {
+  height: 90px;
+  width: 90px;
+  border-radius: 100px;
+  align-self: center;
+}
+
+.fs-14 {
+  font-size: 14px;
 }

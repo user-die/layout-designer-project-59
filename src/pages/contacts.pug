@@ -1,37 +1,10 @@
--
-  var contacts = {
-    "A": [{
-      name: "Алексей Примадонин",
-      status: "Онлайн",
-      avatar: "/images/avatar_3.jpg"
-    }],
-
-    "В": [{
-      name: "Вениамин Редакторович",
-      status: "Онлайн",
-      avatar: "/images/avatar_4.jpg"
-    }],
-
-    "Д": [{
-      name: "Джедай Падаванов",
-      status: "Был онлайн вчера",
-      avatar: "/images/avatar_2.jpg"
-    }],
-
-    "К": [{
-      name: "Кодовёнок Хекслетович",
-      status: "Был онлайн 3 часа назад",
-      avatar: "/images/avatar_1.jpg"
-    },
-    {
-      name: "Королева Верстальщина",
-      status: "Была онлайн вчера",
-      avatar: "/images/avatar_5.jpg"
-    }],
-
-    "П": [{
-      name: "Питонист Джангович",
-      status: "Был онлайн вчера",
-      avatar: "/images/avatar_6.jpg"
-    }],
-  }
+div(id="contact" aria-labelledby="nav-contact-tab").mt-12.overflow.height.tab-pan.fade
+  include contact-list.pug
+    each people, position in contacts
+      p.mt-34= position
+        each user in people  
+          div.contact
+            img(src= user.avatar, alt="").contact-image
+            div.ms-4
+              p.contact-name= user.name
+              p.contact-status= user.status
