@@ -1,4 +1,7 @@
-div(id="contact" aria-labelledby="nav-contact-tab").mt-12.overflow.height.tab-pan.fade
+form(action="").pt-4.pb-4.ps-4.border-bottom.mb-1
+  input(type="text" placeholder='Поиск по контактам' class='form-text').border-0.mt-0
+
+div.mt-12.overflow.height
   include contact-list.pug
     each people, position in contacts
       p.mt-34= position
