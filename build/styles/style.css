@@ -11977,6 +11977,44 @@ textarea.form-control-lg {
   color: #efefef;
 }
 
+.message {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.075);
+  background-color: #fff;
+  margin-bottom: 14px;
+  padding-bottom: 22px;
+  padding-top: 21px;
+  padding-left: 16px;
+  padding-right: 40px;
+  gap: 0 25px;
+}
+.message-image {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+}
+.message-name {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.message-message {
+  margin-bottom: 0;
+  color: #6c757d;
+}
+.message-time {
+  margin: 0;
+}
+.message:hover {
+  background-color: #4545a5;
+}
+.message:hover .message-name {
+  color: #fbfbfb;
+}
+.message:hover .message-message {
+  color: #efefef;
+}
+
 .mt-12 {
   padding-top: 12px;
 }
