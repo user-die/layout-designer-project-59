@@ -10,17 +10,17 @@ html(lang="ru")
     body 
       section
         .me-0.ms-0.mt-0.mb-0.ps-md-4.pe-md-4.pt-md-4.pb-md-4.vw-100.vh-100.bg-light
-          div.border-md.rounded.bg-white.container-xxl.pe-0.ps-0.mw
+          div.border.border-sm.rounded-4.bg-white.container-xxl.pe-0.ps-0.mw
             div.row.me-0.ms-0.roww
 
-              div.col-md-4.border-end.pe-0.ps-0.h100.d-flex.flex-md-column.flex-column-reverse.justify-content-md-start.justify-content-between
+              div.col-xl-4.border-sm.col-lg-5.col-md-6.border-end.pe-0.ps-0.h100.d-flex.flex-md-column.flex-column-reverse.justify-content-md-start.justify-content-between
                 include header.pug
                 div(class="tab-content" id="nav-tabContent")
                   include messages.pug
                   include profile.pug 
                   include contacts.pug
               
-              div.col-md-8.d-md-flex.d-none.align-items-center.flex-column.justify-content-center.pe-0.ps-0
+              div.col-xl-8.col-lg-7.col-md-6.d-md-flex.d-none.align-items-center.flex-column.justify-content-center.pe-0.ps-0
                 img(src="images/avatar_1.jpg", alt="").br
                 p.fw-bold.mb-0.mt-3 Привет, Кодовёнок
                 P.text-secondary.mb-0 Выбери чат, чтобы начать общаться

@@ -1,6 +1,7 @@
 @import "../../../../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "components/contacts.scss";
 @import "components/messages.scss";
+@import "components/message.scss";
 
 .mt-12 {
   padding-top: 12px;
@@ -53,4 +54,36 @@
 
 .fs-14 {
   font-size: 14px;
+}
+
+.wh25 {
+  width: 15.625px;
+  height: 25px;
+}
+
+.rounded1 {
+  border-radius: 16px 0 0 0;
+}
+
+.logo {
+  background-image: url("../../build/images/icons/logo.svg");
+}
+
+.ml-21 {
+  margin-left: 21px;
+}
+
+@media (max-width: 767px) {
+  .rounded1 {
+    border-radius: 0;
+  }
+  .border-sm {
+    border: 0 !important;
+  }
+  .mr-40 {
+    margin-right: 40px;
+  }
+  .mr-183 {
+    margin-right: 183px;
+  }
 }
