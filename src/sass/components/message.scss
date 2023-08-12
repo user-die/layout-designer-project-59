@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$message-padding: map.get($spacers, 4) map.get($spacers, 3) map.get($spacers, 2);
+
+.citation {
+  --#{prefix}message-padding: #{$message-padding};
+
+  &-h1 {
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .citation-#{color} {
+    --#{$prefix}message-color: var(--#{$prefix}#{$color}-text-emphasis);
+    --#{$prefix}message-bg: var(--#{$prefix}#{$color}-bg-subtle);
+  }
+}
