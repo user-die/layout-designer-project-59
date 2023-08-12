@@ -1,17 +1,31 @@
 @use "sass:map";
 
-$message-padding: map.get($spacers, 4) map.get($spacers, 3) map.get($spacers, 2);
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
 
-.citation {
-  --#{prefix}message-padding: #{$message-padding};
+$messages-padding: map.get($spacers, 4);
+$messages-h1-margin: map.get($spacers, 2);
+$messages-p1-margin: map.get($spacers, 2);
+
+.messages {
+  --#{prefix}message-padding: #{$messages-padding};
+  --#{prefix}message-p1-margin: #{$messages-p1-margin};
+
+  display: flex;
+  padding: var(--#{prefix}message-padding);
 
   &-h1 {
+    margin-bottom: map-get($spacers, 2);
   }
-}
 
-@each $color, $value in $theme-colors {
-  .citation-#{color} {
-    --#{$prefix}message-color: var(--#{$prefix}#{$color}-text-emphasis);
-    --#{$prefix}message-bg: var(--#{$prefix}#{$color}-bg-subtle);
+  &-p1 {
+    margin-bottom: var(--#{prefix}message-p1-margin);
   }
 }

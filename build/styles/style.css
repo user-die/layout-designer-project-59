@@ -12015,52 +12015,12 @@ textarea.form-control-lg {
   color: #efefef;
 }
 
-.citation {
-  --prefixmessage-padding: 1.5rem 1rem 0.5rem;
+.message {
+  --prefixmessage-padding: 1.5rem;
+  display: flex;
 }
-.citation-color {
-  --bs-message-color: var(--bs-primary-text-emphasis);
-  --bs-message-bg: var(--bs-primary-bg-subtle);
-}
-
-.citation-color {
-  --bs-message-color: var(--bs-secondary-text-emphasis);
-  --bs-message-bg: var(--bs-secondary-bg-subtle);
-}
-
-.citation-color {
-  --bs-message-color: var(--bs-success-text-emphasis);
-  --bs-message-bg: var(--bs-success-bg-subtle);
-}
-
-.citation-color {
-  --bs-message-color: var(--bs-info-text-emphasis);
-  --bs-message-bg: var(--bs-info-bg-subtle);
-}
-
-.citation-color {
-  --bs-message-color: var(--bs-warning-text-emphasis);
-  --bs-message-bg: var(--bs-warning-bg-subtle);
-}
-
-.citation-color {
-  --bs-message-color: var(--bs-danger-text-emphasis);
-  --bs-message-bg: var(--bs-danger-bg-subtle);
-}
-
-.citation-color {
-  --bs-message-color: var(--bs-light-text-emphasis);
-  --bs-message-bg: var(--bs-light-bg-subtle);
-}
-
-.citation-color {
-  --bs-message-color: var(--bs-dark-text-emphasis);
-  --bs-message-bg: var(--bs-dark-bg-subtle);
-}
-
-.citation-color {
-  --bs-message-color: var(--bs-purple-text-emphasis);
-  --bs-message-bg: var(--bs-purple-bg-subtle);
+.message-h1 {
+  margin-bottom: 0.5rem;
 }
 
 .mt-12 {
@@ -12116,17 +12076,8 @@ textarea.form-control-lg {
   font-size: 14px;
 }
 
-.wh25 {
-  width: 15.625px;
-  height: 25px;
-}
-
 .rounded1 {
   border-radius: 16px 0 0 0;
-}
-
-.logo {
-  background-image: url("../../build/images/icons/logo.svg");
 }
 
 .ml-21 {
