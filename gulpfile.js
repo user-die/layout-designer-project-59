@@ -24,7 +24,7 @@ const buildSass = () => {
 const buildPug = () => {
   console.log("Компиляция Pug");
 
-  return src("src/pages/index.pug")
+  return src("src/pages/*.pug")
     .pipe(pug())
     .pipe(dest("build/"))
     .pipe(browserSync.stream());
