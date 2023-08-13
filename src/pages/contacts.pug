@@ -8,7 +8,7 @@ div(class="tab-pane fade active show" id="nav-contacts" role="tabpanel" aria-lab
       each people, position in contacts
         p.mt-34= position
         each user in people  
-            div.contact.shadow
+            div.contact
               img(src= user.avatar alt="").contact-image
               div.ms-4
                 p.contact-name= user.name
