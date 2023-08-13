@@ -1,4 +1,4 @@
-div(class="tab-pane fade" id="nav-contacts" role="tabpanel" aria-labelledby="nav-contacts-tab" tabindex="0").pe-4.ps-4.pt-5
+div(class="tab-pane fade active show" id="nav-contacts" role="tabpanel" aria-labelledby="nav-contacts-tab" tabindex="0").pe-4.ps-4.pt-5
   p.fs-2.fw-bold.mb-4  Контакты
   form(action="").pt-4.pb-4.ps-4.border-bottom.mb-1
     input(type="text" placeholder='Поиск по контактам' class='form-text').border-0.mt-0
@@ -9,7 +9,7 @@ div(class="tab-pane fade" id="nav-contacts" role="tabpanel" aria-labelledby="nav
         p.mt-34= position
         each user in people  
             div.contact.shadow
-              img(src= user.avatar, alt="").contact-image
+              img(src= user.avatar alt="").contact-image
               div.ms-4
                 p.contact-name= user.name
                 p.contact-status= user.status

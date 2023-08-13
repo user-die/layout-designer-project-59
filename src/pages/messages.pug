@@ -1,16 +1,15 @@
-div(class="tab-pane fade show active" id="nav-message" role="tabpanel" aria-labelledby="nav-message-tab" tabindex="0").pe-4.ps-4.pt-5
+div(class="tab-pane fade" id="nav-message" role="tabpanel" aria-labelledby="nav-message-tab" tabindex="0").pe-4.ps-4.pt-5
   p.fs-2.fw-bold.mb-4  Чаты
   form(action="").pt-4.pb-4.ps-4.border-bottom.mb-1
     input(type="text" placeholder='Поиск по сообщениям' class='form-text').border-0.mt-0
   
-  div
-    include messages-list.pug
-      each people, position in messages
-        each user in people
-          div.message
-            img(src= user.avatar, alt="").message-image
-            div.flex-shrink-1.flex-grow-1
-              div.d-flex.justify-content-between
-                p.message-name= user.name 
-                p.message-time.mb-0= user.time 
-              p.message-message= user.message
+  include messages-list.pug
+    each people, position in messages
+      each user in people
+        div.message
+          img(src= user.avatar ).message-image
+          div.flex-shrink-1.flex-grow-1
+            div.d-flex.justify-content-between
+              p.message-name= user.name 
+              p.message-time.mb-0= user.time 
+            p.message-message= user.message

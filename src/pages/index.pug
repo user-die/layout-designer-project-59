@@ -16,15 +16,22 @@ html(lang="ru")
               div.col-xl-4.border-sm.col-lg-5.col-md-6.border-end.pe-0.ps-0.h100.d-flex.flex-md-column.flex-column-reverse.justify-content-md-start.justify-content-between
                 include header.pug
                 div(class="tab-content" id="nav-tabContent")
-                  include messages.pug
                   include profile.pug 
                   include contacts.pug
-              
-              div.col-xl-8.col-lg-7.col-md-6.d-md-flex.d-none.flex-column.pe-0.ps-0.justify-content-center.align-items-center.text-center
+                  include messages.pug
+                   
+              div.col-xl-8.col-lg-7.col-md-6.d-md-block.d-none.pe-0.ps-0
                 include home.pug
+                include message.pug
+                
+                   
+                  
 
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous")
 
+
+   
     
 
         

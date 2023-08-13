@@ -1,4 +1,10 @@
-@import "../../../../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../../node_modules/bootstrap/scss/mixins";
+
+@import "../../../../../../node_modules/bootstrap/scss/bootstrap";
+
+@import "variables";
 @import "components/contacts.scss";
 @import "components/messages.scss";
 @import "components/message.scss";
@@ -60,8 +66,16 @@
   border-radius: 16px 0 0 0;
 }
 
-.ml-21 {
-  margin-left: 21px;
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-19 {
+  margin-bottom: 19px;
+}
+
+.g-16 {
+  gap: 16px;
 }
 
 @media (max-width: 767px) {
@@ -70,6 +84,9 @@
   }
   .border-sm {
     border: 0 !important;
+  }
+  .ml-21 {
+    margin-left: 21px;
   }
   .mr-40 {
     margin-right: 40px;

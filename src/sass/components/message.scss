@@ -1,31 +1,47 @@
 @use "sass:map";
 
-$spacer: 1rem !default;
-$spacers: (
-  0: 0,
-  1: $spacer * 0.25,
-  2: $spacer * 0.5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-) !default;
-
-$messages-padding: map.get($spacers, 4);
-$messages-h1-margin: map.get($spacers, 2);
-$messages-p1-margin: map.get($spacers, 2);
-
 .messages {
-  --#{prefix}message-padding: #{$messages-padding};
-  --#{prefix}message-p1-margin: #{$messages-p1-margin};
-
   display: flex;
-  padding: var(--#{prefix}message-padding);
+  background: $primary;
+  padding: map-get($spacers, 4);
+  border-radius: 16px;
 
   &-h1 {
     margin-bottom: map-get($spacers, 2);
   }
 
   &-p1 {
-    margin-bottom: var(--#{prefix}message-p1-margin);
+    margin-bottom: 8px;
+    max-width: 510px;
+  }
+
+  &-p2 {
+    padding-top: 5px;
+    border-top: $border-width solid $border-color;
+    font-size: 14px;
+  }
+}
+
+.avatar {
+  border: none;
+  border-radius: $border-radius-pill;
+
+  img {
+    @include img-fluid();
+    border-radius: $border-radius-pill;
+  }
+}
+
+@each $avatar-size-name, $avatar-size-value in $avatar-sizes {
+  .avatar-#{$avatar-size-name} {
+    width: #{$avatar-size-value};
+    height: #{$avatar-size-value};
+  }
+}
+
+@each $color-name, $color-value in $theme-colors {
+  .messages-#{$color-name} {
+    background: $color-value;
+    color: color-contrast($color-value);
   }
 }

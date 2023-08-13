@@ -12015,12 +12015,98 @@ textarea.form-control-lg {
   color: #efefef;
 }
 
-.message {
-  --prefixmessage-padding: 1.5rem;
+.messages {
   display: flex;
+  background: #4545a5;
+  padding: 1.5rem;
+  border-radius: 16px;
 }
-.message-h1 {
+.messages-h1 {
   margin-bottom: 0.5rem;
+}
+.messages-p1 {
+  margin-bottom: 8px;
+  max-width: 510px;
+}
+.messages-p2 {
+  padding-top: 5px;
+  border-top: 1px solid #dee2e6;
+  font-size: 14px;
+}
+
+.avatar {
+  border: none;
+  border-radius: 50rem;
+}
+.avatar img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50rem;
+}
+
+.avatar-sm {
+  width: 50px;
+  height: 50px;
+}
+
+.avatar-md {
+  width: 4rem;
+  height: 4rem;
+}
+
+.avatar-lg {
+  width: 6rem;
+  height: 6rem;
+}
+
+.avatar-xl {
+  width: 8rem;
+  height: 8rem;
+}
+
+.messages-primary {
+  background: #4545a5;
+  color: #fff;
+}
+
+.messages-secondary {
+  background: #6c757d;
+  color: #fff;
+}
+
+.messages-success {
+  background: #198754;
+  color: #fff;
+}
+
+.messages-info {
+  background: #0dcaf0;
+  color: #000;
+}
+
+.messages-warning {
+  background: #ffc107;
+  color: #000;
+}
+
+.messages-danger {
+  background: #dc3545;
+  color: #fff;
+}
+
+.messages-light {
+  background: #f8f9fa;
+  color: #000;
+}
+
+.messages-dark {
+  background: #212529;
+  color: #fff;
+}
+
+.messages-purple {
+  background: #4545a5;
+  color: #fff;
 }
 
 .mt-12 {
@@ -12080,8 +12166,16 @@ textarea.form-control-lg {
   border-radius: 16px 0 0 0;
 }
 
-.ml-21 {
-  margin-left: 21px;
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-19 {
+  margin-bottom: 19px;
+}
+
+.g-16 {
+  gap: 16px;
 }
 
 @media (max-width: 767px) {
@@ -12090,6 +12184,9 @@ textarea.form-control-lg {
   }
   .border-sm {
     border: 0 !important;
+  }
+  .ml-21 {
+    margin-left: 21px;
   }
   .mr-40 {
     margin-right: 40px;
