@@ -6,11 +6,10 @@ div(class="tab-pane fade" id="nav-message" role="tabpanel" aria-labelledby="nav-
   include messages-list.pug
     each people, position in messages
       each user in people
-        div.message
-          a(href="chat.html")  123
+        a(href="chat.html").message.textdecor
           img(src= user.avatar ).message-image
           div.flex-shrink-1.flex-grow-1
             div.d-flex.justify-content-between
               p.message-name= user.name 
-              p.message-time.mb-0= user.time 
+              p.message-time.mb-0r= user.time 
             p.message-message= user.message
