@@ -1,0 +1,72 @@
+@mixin hide-scrollbar() {
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.status {
+  font-size: $small-font-size;
+  color: #6c757d;
+
+  /*   Троеточие в конце длинного сообщения */
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-right: 40px;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    background-color: #4545a5;
+    color: #fbfbfb;
+
+    .status {
+      color: #efefef;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 286px;
+    height: 45px;
+    margin: 1.5rem 0;
+    margin-left: 1.5rem;
+  }
+}
+
+.name-time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time {
+  font-size: $small-font-size;
+  color: #adb5bd;
+}
+
+.hide-scrollbar {
+  @include hide-scrollbar;
+}
+
+@media (max-width: 568px) {
+  .user-card-info {
+    width: 236px;
+  }
+}
