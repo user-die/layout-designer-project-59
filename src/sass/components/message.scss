@@ -1,0 +1,47 @@
+@use "sass:map";
+
+.messages {
+  display: flex;
+  background: $primary;
+  padding: map-get($spacers, 4);
+  border-radius: 16px;
+
+  &-h1 {
+    margin-bottom: map-get($spacers, 2);
+  }
+
+  &-p1 {
+    margin-bottom: 8px;
+    max-width: 510px;
+  }
+
+  &-p2 {
+    padding-top: 5px;
+    border-top: $border-width solid $border-color;
+    font-size: 14px;
+  }
+}
+
+.avatar {
+  border: none;
+  border-radius: $border-radius-pill;
+
+  img {
+    @include img-fluid();
+    border-radius: $border-radius-pill;
+  }
+}
+
+@each $avatar-size-name, $avatar-size-value in $avatar-sizes {
+  .avatar-#{$avatar-size-name} {
+    width: #{$avatar-size-value};
+    height: #{$avatar-size-value};
+  }
+}
+
+@each $color-name, $color-value in $theme-colors {
+  .messages-#{$color-name} {
+    background: $color-value;
+    color: color-contrast($color-value);
+  }
+}
